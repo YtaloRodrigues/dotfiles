@@ -3,6 +3,9 @@
   "workbench.iconTheme": "material-icon-theme",
   "workbench.editor.labelFormat": "short",
   "workbench.startupEditor": "newUntitledFile",
+  "workbench.preferredLightColorTheme": "Default Dark+",
+  "workbench.colorTheme": "Dracula Pro",
+  "window.zoomLevel": 1,
 
   // Editor settings
   "editor.fontSize": 12,
@@ -14,6 +17,7 @@
     "source.organizeImports": true
   },
   "editor.tabSize": 2,
+  "editor.suggestSelection": "first",
   "editor.fontFamily": "Fira Code",
   "editor.fontLigatures": true,
   "editor.renderLineHighlight": "gutter",
@@ -21,13 +25,15 @@
   "editor.parameterHints.enabled": false,
 
   // VSCode stuff
-  "terminal.integrated.shell.osx": "/bin/zsh",
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.bellDuration": 10000,
   "breadcrumbs.enabled": true,
   "explorer.compactFolders": false,
   "explorer.confirmDragAndDrop": false,
   "explorer.confirmDelete": false,
   "javascript.updateImportsOnFileMove.enabled": "never",
   "typescript.updateImportsOnFileMove.enabled": "never",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 
   // Emmet
   "emmet.syntaxProfiles": {
@@ -54,6 +60,9 @@
   "prettier.jsxSingleQuote": true,
   "sql-formatter.uppercase": true,
   "docker.showStartPage": false,
+  "gitlens.advanced.messages": {
+    "suppressGitMissingWarning": true
+  },
 
   // yaml custom tags CloudFormation
   "yaml.customTags": [
@@ -107,11 +116,5 @@
     "!Join sequence",
     "!Condition"
   ],
-  "yaml.format.enable": true,
-  "gitlens.advanced.messages": {
-    "suppressGitMissingWarning": true
-  },
-  "window.zoomLevel": 1,
-  "workbench.preferredLightColorTheme": "Default Dark+",
-  "workbench.colorTheme": "Dracula Pro"
+  "yaml.format.enable": true
 }
