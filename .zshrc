@@ -1,7 +1,13 @@
-export ZSH="$HOME/.oh-my-zsh"
+export ZSH="/Users/$USER/.oh-my-zsh"
 
 # Display red dots while waiting for completion
 COMPLETION_WAITING_DOTS="true"
+
+function node_prompt_version {
+    if which node &> /dev/null; then
+        echo "%{$fg_bold[green]%}$(node -v)%{$fg[green]%} %{$reset_color%}"
+    fi
+}
 
 plugins=(
     git
@@ -25,7 +31,7 @@ CYAN="%{$fg_bold[cyan]%}"
 RED="%{$fg_bold[red]%}"
 RESET="%{$reset_color%}"
 
-PROMPT='$GREEN ⬢  $YELLOW%c $(git_prompt_info) $RESET'
+PROMPT=' $YELLOW%c $(git_prompt_info) $RESET in $GREEN ⬢ $(node_prompt_version)'
 
 ZSH_THEME_GIT_PROMPT_PREFIX=" $CYAN"
 ZSH_THEME_GIT_PROMPT_SUFFIX=""
@@ -40,7 +46,6 @@ export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 export NVM_DIR="$HOME/.nvm"
   [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
